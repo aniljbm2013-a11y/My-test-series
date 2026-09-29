@@ -1,0 +1,161 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Test Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MY TEST SERIES</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#tests">Test Series</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Prepare. Practice. Perform.</h1>
+    <p>Practice NDA, SSC, CDS and other competitive exams.</p>
+    <button onclick="showTests()">Start Testing</button>
+</section>
+
+<section id="tests" class="tests-section">
+    <h2>Available Tests</h2>
+
+    <div class="test-card">
+        <h3>NDA General Ability Test - 1</h3>
+        <p>10 Questions | 10 Minutes</p>
+        <p>+4 for correct | -1.33 for incorrect</p>
+        <button onclick="startTest()">Start Test</button>
+    </div>
+</section>
+
+<section id="testScreen" class="test-screen">
+
+    <div class="test-header">
+        <h2>NDA Mock Test</h2>
+        <div id="timer">10:00</div>
+    </div>
+
+    <div class="question-box">
+
+        <div class="question-number">
+            Question <span id="questionNumber">1</span>/10
+        </div>
+
+        <h3 id="questionText"></h3>
+
+        <div id="options"></div>
+
+        <div class="navigation">
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resultScreen" class="result-screen">
+
+    <h1>Test Completed 🎉</h1>
+
+    <div class="result-card">
+        <h2>Your Score</h2>
+        <div id="score">0</div>
+
+        <p>Correct: <span id="correct">0</span></p>
+        <p>Incorrect: <span id="incorrect">0</span></p>
+        <p>Unattempted: <span id="unattempted">0</span></p>
+    </div>
+
+    <button onclick="location.reload()">Take Test Again</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html> html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Test Series</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>MY TEST SERIES</h2>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#tests">Test Series</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <h1>Prepare. Practice. Perform.</h1>
+
+        <p>
+            Online Test Series for NDA, SSC, CDS and other competitive exams.
+        </p>
+
+        <button onclick="showTests()">
+            Explore Tests
+        </button>
+
+    </section>
+
+    <section id="tests" class="tests">
+
+        <h2>Popular Test Series</h2>
+
+        <div class="test-container">
+
+            <div class="test-card">
+                <h3>NDA Test Series</h3>
+
+                <p>
+                    Full-length and subject-wise NDA mock tests.
+                </p>
+
+                <button onclick="startTest()">
+                    Start Test
+                </button>
+            </div>
+
+            <div class="test-card">
+                <h3>SSC Test Series</h3>
+
+                <p>
+                    Practice tests for SSC competitive examinations.
+                </p>
+
+                <button>
+                    View Tests
+      

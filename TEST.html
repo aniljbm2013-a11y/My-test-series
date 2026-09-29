@@ -1,0 +1,206 @@
+<!<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Test Series</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h2>MY TEST SERIES</h2>
+
+    <nav>
+        <a href="#" onclick="goHome()">Home</a>
+        <a href="#tests">Test Series</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+    <h1>Prepare. Practice. Perform.</h1>
+
+    <p>
+        Online Test Series for NDA, SSC, CDS and other competitive exams.
+    </p>
+
+    <button onclick="showTests()">
+        Explore Tests
+    </button>
+
+</section>
+
+
+<!-- TEST LIST -->
+
+<section id="tests" class="tests">
+
+    <h2>Popular Test Series</h2>
+
+    <div class="test-container">
+
+        <div class="test-card">
+
+            <h3>NDA Mock Test 1</h3>
+
+            <p>
+                10 Questions<br>
+                10 Minutes<br>
+                NDA-style marking
+            </p>
+
+            <button onclick="startTest()">
+                Start Test
+            </button>
+
+        </div>
+
+
+        <div class="test-card">
+
+            <h3>SSC Mock Test 1</h3>
+
+            <p>
+                Practice test for SSC examinations.
+            </p>
+
+            <button onclick="comingSoon()">
+                View Test
+            </button>
+
+        </div>
+
+
+        <div class="test-card">
+
+            <h3>CDS Mock Test 1</h3>
+
+            <p>
+                Practice test for CDS examinations.
+            </p>
+
+            <button onclick="comingSoon()">
+                View Test
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TEST SCREEN -->
+
+<section id="testScreen" class="test-screen">
+
+    <div class="test-top">
+
+        <h2>NDA Mock Test 1</h2>
+
+        <div id="timer">
+            10:00
+        </div>
+
+    </div>
+
+
+    <div class="question-card">
+
+        <p class="question-number">
+            Question <span id="questionNumber">1</span> of 10
+        </p>
+
+        <h3 id="questionText">
+            Question will appear here.
+        </h3>
+
+        <div id="options"></div>
+
+
+        <div class="navigation">
+
+            <button onclick="previousQuestion()">
+                Previous
+            </button>
+
+            <button onclick="nextQuestion()">
+                Next
+            </button>
+
+            <button class="submit-button" onclick="submitTest()">
+                Submit Test
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESULT -->
+
+<section id="resultScreen" class="result-screen">
+
+    <h1>Test Completed 🎉</h1>
+
+    <div class="result-card">
+
+        <h2>Your Score</h2>
+
+        <div id="score">
+            0
+        </div>
+
+        <p>
+            Correct:
+            <strong id="correct">0</strong>
+        </p>
+
+        <p>
+            Incorrect:
+            <strong id="incorrect">0</strong>
+        </p>
+
+        <p>
+            Unattempted:
+            <strong id="unattempted">0</strong>
+        </p>
+
+    </div>
+
+    <button onclick="goHome()">
+        Back to Home
+    </button>
+
+</section>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html> html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>

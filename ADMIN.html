@@ -1,0 +1,206 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel - My Test Series</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h2>MY TEST SERIES - ADMIN</h2>
+
+    <nav>
+        <a href="index.html">Website</a>
+    </nav>
+
+</header>
+
+
+<section class="admin">
+
+    <h1>Admin Panel</h1>
+
+    <p class="admin-subtitle">
+        Create and manage your test questions.
+    </p>
+
+
+    <!-- TEST INFORMATION -->
+
+    <div class="admin-card">
+
+        <h2>Create Test</h2>
+
+        <label>Test Name</label>
+
+        <input
+            type="text"
+            id="testName"
+            placeholder="Example: NDA Mock Test 2"
+        >
+
+
+        <label>Exam</label>
+
+        <select id="exam">
+
+            <option value="NDA">
+                NDA
+            </option>
+
+            <option value="SSC">
+                SSC
+            </option>
+
+            <option value="CDS">
+                CDS
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- QUESTION FORM -->
+
+    <div class="admin-card">
+
+        <h2>Add Question</h2>
+
+
+        <label>Question</label>
+
+        <textarea
+            id="question"
+            placeholder="Enter your question"
+        ></textarea>
+
+
+        <label>Option A</label>
+
+        <input
+            type="text"
+            id="optionA"
+            placeholder="Option A"
+        >
+
+
+        <label>Option B</label>
+
+        <input
+            type="text"
+            id="optionB"
+            placeholder="Option B"
+        >
+
+
+        <label>Option C</label>
+
+        <input
+            type="text"
+            id="optionC"
+            placeholder="Option C"
+        >
+
+
+        <label>Option D</label>
+
+        <input
+            type="text"
+            id="optionD"
+            placeholder="Option D"
+        >
+
+
+        <label>Correct Answer</label>
+
+        <select id="correctAnswer">
+
+            <option value="0">
+                Option A
+            </option>
+
+            <option value="1">
+                Option B
+            </option>
+
+            <option value="2">
+                Option C
+            </option>
+
+            <option value="3">
+                Option D
+            </option>
+
+        </select>
+
+
+        <label>Explanation</label>
+
+        <textarea
+            id="explanation"
+            placeholder="Explain the correct answer"
+        ></textarea>
+
+
+        <button onclick="addQuestion()">
+            Add Question
+        </button>
+
+    </div>
+
+
+    <!-- QUESTION LIST -->
+
+    <div class="admin-card">
+
+        <h2>Questions Added</h2>
+
+        <div id="questionList">
+
+            <p>No questions added yet.</p>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="save-test"
+        onclick="saveTest()"
+    >
+        Save Test
+    </button>
+
+
+</section>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>

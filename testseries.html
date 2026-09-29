@@ -1,0 +1,601 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Test Series</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MY TEST SERIES</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#tests">Test Series</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Prepare. Practice. Perform.</h1>
+    <p>Practice NDA, SSC, CDS and other competitive exams.</p>
+    <button onclick="showTests()">Start Testing</button>
+</section>
+
+<section id="tests" class="tests-section">
+    <h2>Available Tests</h2>
+
+    <div class="test-card">
+        <h3>NDA General Ability Test - 1</h3>
+        <p>10 Questions | 10 Minutes</p>
+        <p>+4 for correct | -1.33 for incorrect</p>
+        <button onclick="startTest()">Start Test</button>
+    </div>
+</section>
+
+<section id="testScreen" class="test-screen">
+
+    <div class="test-header">
+        <h2>NDA Mock Test</h2>
+        <div id="timer">10:00</div>
+    </div>
+
+    <div class="question-box">
+
+        <div class="question-number">
+            Question <span id="questionNumber">1</span>/10
+        </div>
+
+        <h3 id="questionText"></h3>
+
+        <div id="options"></div>
+
+        <div class="navigation">
+            <button onclick="previousQuestion()">Previous</button>
+            <button onclick="nextQuestion()">Next</button>
+            <button class="submit-btn" onclick="submitTest()">Submit Test</button>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resultScreen" class="result-screen">
+
+    <h1>Test Completed 🎉</h1>
+
+    <div class="result-card">
+        <h2>Your Score</h2>
+        <div id="score">0</div>
+
+        <p>Correct: <span id="correct">0</span></p>
+        <p>Incorrect: <span id="incorrect">0</span></p>
+        <p>Unattempted: <span id="unattempted">0</span></p>
+    </div>
+
+    <button onclick="location.reload()">Take Test Again</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html> html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+}
+
+/* HEADER */
+
+header {
+    height: 65px;
+    background: #111827;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 90px 20px;
+    background: #1d4ed8;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* TESTS */
+
+.tests-section {
+    padding: 50px 8%;
+}
+
+.tests-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.test-card {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.test-card h3 {
+    margin-bottom: 15px;
+}
+
+.test-card p {
+    margin-bottom: 10px;
+}
+
+/* TEST SCREEN */
+
+.test-screen {
+    display: none;
+    padding: 30px 8%;
+}
+
+.test-header {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 22px;
+    font-weight: bold;
+    color: #dc2626;
+}
+
+.question-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.question-number {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#questionText {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.option {
+    display: block;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #eff6ff;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.submit-btn {
+    background: #16a34a;
+}
+
+.submit-btn:hover {
+    background: #15803d;
+}
+
+/* RESULT */
+
+.result-screen {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.result-card {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+#score {
+    font-size: 50px;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 20px;
+}
+
+.result-card p {
+    margin: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .question-box {
+        padding: 20px;
+    }
+}
+const questions = [
+
+    {
+        question: "Who was the first Indian recipient of the Ashoka Chakra?",
+        options: [
+            "Major Somnath Sharma",
+            "Havildar Abdul Hamid",
+            "Captain Vikram Batra",
+            "Major Shaitan Singh"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "What is the capital of Uttarakhand?",
+        options: [
+            "Nainital",
+            "Dehradun",
+            "Haridwar",
+            "Almora"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which Article deals with Fundamental Duties?",
+        options: [
+            "Article 32",
+            "Article 51A",
+            "Article 21",
+            "Article 19"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Which planet is known as the Red Planet?",
+        options: [
+            "Venus",
+            "Mars",
+            "Jupiter",
+            "Mercury"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Who wrote the Indian national anthem?",
+        options: [
+            "Bankim Chandra Chattopadhyay",
+            "Rabindranath Tagore",
+            "Sarojini Naidu",
+            "Subhash Chandra Bose"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "What is the SI unit of force?",
+        options: [
+            "Joule",
+            "Watt",
+            "Newton",
+            "Pascal"
+        ],
+        answer: 2
+    },
+
+    {
+        question: "The Battle of Plassey was fought in which year?",
+        options: [
+            "1757",
+            "1764",
+            "1857",
+            "1748"
+        ],
+        answer: 0
+    },
+
+    {
+        question: "Which is the largest ocean in the world?",
+        options: [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Arctic Ocean",
+            "Pacific Ocean"
+        ],
+        answer: 3
+    },
+
+    {
+        question: "Which gas is most abundant in Earth's atmosphere?",
+        options: [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon dioxide",
+            "Hydrogen"
+        ],
+        answer: 1
+    },
+
+    {
+        question: "Who is known as the Iron Man of India?",
+        options: [
+            "Jawaharlal Nehru",
+            "Mahatma Gandhi",
+            "Sardar Vallabhbhai Patel",
+            "B. R. Ambedkar"
+        ],
+        answer: 2
+    }
+
+];
+
+let currentQuestion = 0;
+let selectedAnswers = new Array(questions.length).fill(null);
+
+let timeLeft = 600;
+let timerInterval;
+
+
+/* SHOW TESTS */
+
+function showTests() {
+    document.getElementById("tests").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+
+/* START TEST */
+
+function startTest() {
+
+    document.querySelector(".hero").style.display = "none";
+    document.querySelector(".tests-section").style.display = "none";
+
+    document.getElementById("testScreen").style.display = "block";
+
+    currentQuestion = 0;
+    selectedAnswers.fill(null);
+
+    timeLeft = 600;
+
+    displayQuestion();
+
+    timerInterval = setInterval(updateTimer, 1000);
+}
+
+
+/* DISPLAY QUESTION */
+
+function displayQuestion() {
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("questionNumber").textContent =
+        currentQuestion + 1;
+
+    document.getElementById("questionText").textContent =
+        question.question;
+
+    const optionsContainer =
+        document.getElementById("options");
+
+    optionsContainer.innerHTML = "";
+
+    question.options.forEach((option, index) => {
+
+        const label = document.createElement("label");
+
+        label.className = "option";
+
+        label.innerHTML = `
+            <input 
+                type="radio"
+                name="answer"
+                value="${index}"
+                ${selectedAnswers[currentQuestion] === index ? "checked" : ""}
+            >
+            ${option}
+        `;
+
+        label.querySelector("input").addEventListener(
+            "change",
+            function () {
+                selectedAnswers[currentQuestion] = index;
+            }
+        );
+
+        optionsContainer.appendChild(label);
+    });
+}
+
+
+/* NEXT */
+
+function nextQuestion() {
+
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        displayQuestion();
+    }
+}
+
+
+/* PREVIOUS */
+
+function previousQuestion() {
+
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        displayQuestion();
+    }
+}
+
+
+/* TIMER */
+
+function updateTimer() {
+
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+
+    document.getElementById("timer").textContent =
+        `${minutes}:${seconds.toString().padStart(2, "0")}`;
+
+    timeLeft--;
+
+    if (timeLeft < 0) {
+        clearInterval(timerInterval);
+        submitTest();
+    }
+}
+
+
+/* SUBMIT */
+
+function submitTest() {
+
+    clearInterval(timerInterval);
+
+    let correct = 0;
+    let incorrect = 0;
+    let unattempted = 0;
+
+    questions.forEach((question, index) => {
+
+        if (selectedAnswers[index] === null) {
+            unattempted++;
+        }
+
+        else if (selectedAnswers[index] === question.answer) {
+            correct++;
+        }
+
+        else {
+            incorrect++;
+        }
+
+    });
+
+    /*
+       NDA-style example:
+       Correct = +4
+       Incorrect = -1.33
+    */
+
+    const score =
+        (correct * 4) -
+        (incorrect * 1.33);
+
+    document.getElementById("testScreen").style.display = "none";
+
+    document.getElementById("resultScreen").style.display = "block";
+
+    document.getElementById("score").textContent =
+        score.toFixed(2);
+
+    document.getElementById("correct").textContent =
+        correct;
+
+    document.getElementById("incorrect").textContent =
+        incorrect;
+
+    document.getElementById("unattempted").textContent =
+        unattempted;
+}

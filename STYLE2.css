@@ -1,0 +1,103 @@
+/* ADMIN PANEL */
+
+.admin {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px 20px;
+}
+
+.admin h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.admin-subtitle {
+
+    color: #667085;
+
+    margin-bottom: 30px;
+}
+
+.admin-card {
+
+    background: white;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+}
+
+.admin-card h2 {
+
+    margin-bottom: 25px;
+}
+
+.admin-card label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.admin-card input,
+.admin-card textarea,
+.admin-card select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+.admin-card textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.admin-question {
+
+    padding: 20px;
+
+    margin-top: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    line-height: 1.6;
+}
+
+.save-test {
+
+    width: 100%;
+
+    padding: 16px;
+
+    background: #16a34a;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
